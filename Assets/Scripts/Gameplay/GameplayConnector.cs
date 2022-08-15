@@ -8,7 +8,7 @@ namespace Tim1RX.SpaceInvader.Gameplay
 {
     public class GameplayConnector : MonoBehaviour
     {
-
+        
     }
 }
 
