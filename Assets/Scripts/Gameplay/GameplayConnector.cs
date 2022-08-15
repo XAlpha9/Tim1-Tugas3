@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Agate.MVC.Base;
+using Agate.MVC.Core;
 
-public class GameplayConnector : MonoBehaviour
+namespace Tim1RX.SpaceInvader.Gameplay
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameplayConnector : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
+
