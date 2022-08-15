@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.agate.mvc": {
-      "version": "file:D:/Unity/MVC-Base/Packages/com.agate.mvc",
+      "version": "file:D:/MVC-Base/Packages/com.agate.mvc",
       "depth": 0,
       "source": "local",
       "dependencies": {}
