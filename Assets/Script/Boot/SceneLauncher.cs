@@ -10,7 +10,20 @@ namespace Tim1RX.SpaceInvader.Boot
         where TLauncher : SceneLauncher<TLauncher, TView>
         where TView : BaseSceneView
     {
+        protected override ILoad GetLoader()
+        {
+            return SceneLoader.Instance;
+        }
 
+        protected override IMain GetMain()
+        {
+            return GameMain.Instance;
+        }
+
+        protected override ISplash GetSplash()
+        {
+            return SplashScreen.Instance;
+        }
     }
 }
 
