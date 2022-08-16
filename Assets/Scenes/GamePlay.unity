@@ -3456,6 +3456,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14783e0bfb8e3724fa1e707ac41aba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RightInput: 275
+  LeftInput: 276
+  ShootInput: 32
+  Player: {fileID: 957925974}
 --- !u!1 &960618525
 GameObject:
   m_ObjectHideFlags: 0

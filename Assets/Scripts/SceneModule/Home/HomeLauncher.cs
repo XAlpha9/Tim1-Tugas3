@@ -10,15 +10,6 @@ namespace Tim1RX.SpaceInvader.Home
     {
         public override string SceneName => "Home";
 
-        private void OnClickPlayButton()
-        {
-            SceneLoader.Instance.LoadScene("Gameplay");
-        }
-        protected override ILoad GetLoader()
-        {
-            return SceneLoader.Instance;
-        }
-
         protected override IMain GetMain()
         {
             return GameMain.Instance;
@@ -48,6 +39,14 @@ namespace Tim1RX.SpaceInvader.Home
         {
             yield return null;  
         }
-        
+        private void OnClickPlayButton()
+        {
+            SceneLoader.Instance.LoadScene("Gameplay");
+        }
+        protected override ILoad GetLoader()
+        {
+            return SceneLoader.Instance;
+        }
+
     }
 }

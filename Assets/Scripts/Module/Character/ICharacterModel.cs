@@ -8,7 +8,6 @@ namespace Tim1RX.SpaceInvader.Module.Character
 {
     public interface ICharacterModel : IBaseModel
     {
-        public GameObject Player { get; }
         public float PlayerX { get; }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 using Agate.MVC.Base;
 using Agate.MVC.Core;
 using Tim1RX.SpaceInvader.Boot;
+using Tim1RX.SpaceInvader.Module.Character;
+using Tim1RX.SpaceInvader.Message;
 
 namespace Tim1RX.SpaceInvader.Module.Character
 {
@@ -16,8 +18,10 @@ namespace Tim1RX.SpaceInvader.Module.Character
         public GameObject Player { get; private set; }
         protected void OnCodeDown()
         {
+            Debug.Log("tombol kepencet");
             if (Input.GetKeyDown(RightInput))
             {
+                Debug.Log("Tombol masuk");
                 PlayerX = Player.transform.position.x;
             }
         } 

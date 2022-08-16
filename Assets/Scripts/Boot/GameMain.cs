@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Agate.MVC.Base;
 using Agate.MVC.Core;
+using Tim1RX.SpaceInvader.SaveData;
 
 namespace Tim1RX.SpaceInvader.Boot
 {
@@ -15,7 +16,10 @@ namespace Tim1RX.SpaceInvader.Boot
 
         protected override IController[] GetDependencies()
         {
-            return null;
+            return new IController[]
+            {
+                new SaveController()
+            };
         }
 
         protected override IEnumerator StartInit()
