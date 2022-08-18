@@ -5,12 +5,13 @@ using Agate.MVC.Base;
 using Agate.MVC.Core;
 using Tim1RX.SpaceInvader.Boot;
 using Tim1RX.SpaceInvader.Gameplay;
+using Tim1RX.SpaceInvader.Module.Character;
 
 namespace Tim1RX.SpaceInvader.Gameplay
 {
     public class GameplayLauncher : SceneLauncher<GameplayLauncher, GameplayView>
     {
-        public CharacterController _Char;
+        public Module.Character.CharacterController _Char;
         // Use the same name with the scene that we add in build setting
         public override string SceneName => "Gameplay";
 
@@ -26,7 +27,7 @@ namespace Tim1RX.SpaceInvader.Gameplay
         {
             return new IController[]
             {
-
+                new Module.Character.CharacterController()
             };
         }
 
@@ -37,6 +38,8 @@ namespace Tim1RX.SpaceInvader.Gameplay
 
         protected override IEnumerator InitSceneObject()
         {
+            _Char.SetView(_view.CharacterView);
+            Debug.Log("Gameplay Enumerator Works :)");
             yield return null;
         }
 
