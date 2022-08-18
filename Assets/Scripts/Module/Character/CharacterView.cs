@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Agate.MVC.Base;
 using Agate.MVC.Core;
-using Tim1RX.SpaceInvader.Module.Character;
 using UnityEngine.Events;
 
 namespace Tim1RX.SpaceInvader.Module.Character
@@ -15,12 +14,7 @@ namespace Tim1RX.SpaceInvader.Module.Character
         [SerializeField]
         private GameObject Player;
         private UnityAction _OnKeyLeft, _OnkeyRight, _OnKeyShoot;
-        private Rigidbody2D rig;
 
-        private void Start()
-        {
-            rig = GetComponent<Rigidbody2D>();
-        }
         public void SetCallbacks(UnityAction OnKeyLeft, UnityAction OnKeyRight, UnityAction OnKeyShoot)
         {
             _OnKeyLeft = OnKeyLeft;
@@ -49,22 +43,14 @@ namespace Tim1RX.SpaceInvader.Module.Character
             {
                 _OnkeyRight?.Invoke();
                 Debug.Log("Goes to Right :)");
-                if (Input.GetKeyDown(ShootInput))
-                {
-                    _OnKeyShoot?.Invoke();
-                    Debug.Log("Goes Bang :)");
-                }
             }
+
             if (Input.GetKey(LeftInput))
             {
                 _OnKeyLeft?.Invoke();
                 Debug.Log("Goes to Left :)");
-                if (Input.GetKeyDown(ShootInput))
-                {
-                    _OnKeyShoot?.Invoke();
-                    Debug.Log("Goes Bang :)");
-                }
             }
+            
             if (Input.GetKeyDown(ShootInput))
             {
                 _OnKeyShoot?.Invoke();

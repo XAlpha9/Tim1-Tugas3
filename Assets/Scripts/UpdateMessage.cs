@@ -8,11 +8,17 @@ namespace Tim1RX.SpaceInvader.Message
 {
     public struct UpdateMessage
     {
-        public float PlayerX { get; private set; }
-        public UpdateMessage(float playerX)
+        //public float PlayerX { get; private set; }
+        public bool Shoot { get; private set; }
+
+        public UpdateMessage(bool shoot)
         {
-            PlayerX = playerX;
+            Shoot = shoot;
         }
+        //public UpdateMessage(float playerX)
+        //{
+        //    PlayerX = playerX;
+        //}
     }
 }
 

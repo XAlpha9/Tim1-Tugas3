@@ -13,7 +13,7 @@ namespace Tim1RX.SpaceInvader.Gameplay
         private SaveController _saveData;
         public void OnUpdatePlayerX(UpdateMessage message)
         {
-            _saveData.OnUpdatePlayerX(message.PlayerX);
+            //_saveData.OnUpdatePlayerX(message.PlayerX);
         }
         protected override void Connect()
         {
