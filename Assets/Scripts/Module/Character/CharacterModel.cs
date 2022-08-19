@@ -4,6 +4,7 @@ using UnityEngine;
 using Agate.MVC.Base;
 using Agate.MVC.Core;
 using Tim1RX.SpaceInvader.Module.Character;
+using Tim1RX.SpaceInvader.Module.Projectile;
 
 namespace Tim1RX.SpaceInvader.Module.Character
 {
@@ -14,6 +15,7 @@ namespace Tim1RX.SpaceInvader.Module.Character
         public KeyCode RightInput { get; private set; }
         public KeyCode LeftInput { get; private set; }
         public KeyCode ShootInput { get; private set; }
+        public ProjectileView ProjView { get; private set; }
 
         public void SetX(float playerX)
         {

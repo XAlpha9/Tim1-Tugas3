@@ -12,8 +12,20 @@ namespace Tim1RX.SpaceInvader.Module.Projectile
         protected GameObject EnemyProj { get; private set; }
         protected GameObject PoweredUpProj { get; private set; }
         public GameObject Player { get; private set; }
+        public float ProjcetileY { get; private set; }
 
+        private void ProjectileMove()
+        {
+            _model.SetY(ProjcetileY);
+            ProjcetileY = ProjcetileY + 0.05f;
+        }
 
+        public override void SetView(ProjectileView view)
+        {
+            base.SetView(view);
+            view.Callback(ProjectileMove);
+            Debug.Log("Projectile called Back!");
+        }
     }
 }
 

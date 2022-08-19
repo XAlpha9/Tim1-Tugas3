@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Agate.MVC.Base;
 using Agate.MVC.Core;
+using UnityEngine.Events;
 
 namespace Tim1RX.SpaceInvader.Module.Projectile
 {
@@ -13,6 +14,12 @@ namespace Tim1RX.SpaceInvader.Module.Projectile
         [SerializeField]
         private GameObject Players;
         public bool isShoot = false;
+        private UnityAction _ProjectileMove;
+
+        public void Callback(UnityAction projectileMove)
+        {
+            _ProjectileMove = projectileMove;
+        }
 
         protected override void InitRenderModel(IProjectileModel model)
         {
@@ -30,8 +37,18 @@ namespace Tim1RX.SpaceInvader.Module.Projectile
 
         void Update()
         {
-            //Instantiate(PlayerProj, new Vector2(Players.transform.position.x, -4.2f))
-            //Instantiate(PlayerProj, transform.position(Players.transform.position.x, 4.2f), transform);
+            if(isShoot == true)
+            {
+                Instantiate(PlayerProj, new Vector2(Players.transform.position.x, -4.2f), Quaternion.identity);
+                isShoot = false;
+                //Instantiate(PlayerProj, transform.position(Players.transform.position.x, 4.2f), transform);
+            }
+
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Destroy(this.gameObject);
         }
     }
 

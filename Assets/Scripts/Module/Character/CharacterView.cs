@@ -4,6 +4,7 @@ using UnityEngine;
 using Agate.MVC.Base;
 using Agate.MVC.Core;
 using UnityEngine.Events;
+using Tim1RX.SpaceInvader.Module.Projectile;
 
 namespace Tim1RX.SpaceInvader.Module.Character
 {
@@ -13,6 +14,8 @@ namespace Tim1RX.SpaceInvader.Module.Character
         private KeyCode RightInput, LeftInput, ShootInput;
         [SerializeField]
         private GameObject Player;
+        [SerializeField]
+        private ProjectileView ProjView;
         private UnityAction _OnKeyLeft, _OnkeyRight, _OnKeyShoot;
 
         public void SetCallbacks(UnityAction OnKeyLeft, UnityAction OnKeyRight, UnityAction OnKeyShoot)

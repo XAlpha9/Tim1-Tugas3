@@ -2440,6 +2440,7 @@ MonoBehaviour:
   LeftInput: 276
   ShootInput: 32
   Player: {fileID: 957925974}
+  ProjView: {fileID: 1672506752}
 --- !u!4 &598592974
 Transform:
   m_ObjectHideFlags: 0
@@ -5679,6 +5680,7 @@ MonoBehaviour:
   EnemyProj: {fileID: 1256903743107299069, guid: 3edaa368ed92ab444ba403d0dbe08342, type: 3}
   PoweredUpProj: {fileID: 1738734347575523797, guid: f5c6ce7f9a894e14ca889888e2219933, type: 3}
   Players: {fileID: 957925974}
+  isShoot: 0
 --- !u!1 &1697831035
 GameObject:
   m_ObjectHideFlags: 0
